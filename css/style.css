@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 1000px;
+    height: auto;
+    margin: 150px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 440px;
+    grid-gap: 30px;
+}
+
+.profile{
+    position: relative;
+    border-radius: 10px;
+    transition: 0.5s;
+    overflow: hidden;
+    height: 300px;
+}
+
+.profile:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+}
+
+.profile .imageContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+}
+
+.profile:hover .imageContainer{
+    opacity: 0.6;
+}
+
+.imageContainer .profilePicture{
+    width: 100%;
+}
+
+.profile .details{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -75%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.7s;
+    padding-top: 120px;
+}
+
+.profile:hover .details{
+    bottom: 0;
+}
+
+.profile:nth-child(1) .details{
+    background: linear-gradient(0deg, #c21833, transparent);
+}
+
+.profile:nth-child(2) .details{
+    background: linear-gradient(0deg, #8012a5, transparent);
+}
+
+.profile:nth-child(3) .details{
+    background: linear-gradient(0deg, #3a414c, transparent);
+}
+
+.details .profileName{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.profileName span{
+    color: #ffeb3b;
+    font-size: 16px;
+}
+
+.details .introduction{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font: 12px;
+}
+
+.details ul{
+    display: flex;
+    margin: 20px 0 0 ;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.details ul li{
+    list-style: none;
+}
+
+.details ul li a{
+    color: #fff;
+    padding: 0 10px;
+    font-size: 18px;
+    text-decoration: none;
+}
